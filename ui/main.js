@@ -4,7 +4,7 @@ var count = document.getElementById('count');
 but.onclick = function() {
 	console.info("Pressed");
 	//Make request object
-	var request = XMLHttpRequest();
+	var request = new XMLHttpRequest();
 	//Capture the response and store it in a variable
 	request.onreadystatechange = function() {
 		if(request.readystate === XMLHttpRequest.DONE && request.status == 200){

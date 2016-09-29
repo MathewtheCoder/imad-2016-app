@@ -2,17 +2,16 @@
 var but = document.getElementById('counter');
 
 but.onclick = function() {
-	console.info("Pressed");
+	
 	//Make request object
 	var request = new XMLHttpRequest();
 	//Capture the response and store it in a variable
 	request.onreadystatechange = function() {
-		console.warn(request.readystate);
+		//console.warn(request.readystate);
 		if(request.readyState === XMLHttpRequest.DONE){
 			//Do something
-			console.warn(request.status);
 			if(request.status === 200){
-				console.info("Ready");
+				//console.info("Ready");
 				var counter = request.responseText;
 				var count = document.getElementById('count');
 				//Render it in span

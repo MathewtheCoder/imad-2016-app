@@ -63,7 +63,12 @@ var counter = 0;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+app.get('/search-name', function(req, res){
+	var name = req.query.name;
+	names.push(name);
+	//JSON
+	res.send(JSON.stringify(names));
+});
 app.get('/counter', function (req, res){
 	counter = counter + 1;
 	res.send(counter.toString());
@@ -73,6 +78,16 @@ app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
+
+var names = [];
+/*
+app.get('/search-name/:name', function(req, res){
+	var name = req.params.name;
+	names.push(name);
+	//JSON
+	res.send(JSON.stringify(names));
+});
+*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

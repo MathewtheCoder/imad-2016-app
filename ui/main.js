@@ -26,13 +26,27 @@ var inputField = document.getElementById('txt_name');
 var input = inputField.value;
 var submit = document.getElementById('btn_submit');
 submit.onclick = function() {
+	//Make request object
+	var request = new XMLHttpRequest();
+	//Capture the response and store it in a variable
+	request.onreadystatechange = function() {
+		//console.warn(request.readystate);
+		if(request.readyState === XMLHttpRequest.DONE){
+			//Do something
+			if(request.status === 200){
+				//console.info("Ready");
+				var names = ['Mathew','Ann','John'];
+				var list = '';
+				for (var i=0; i<names.length; i++){
+					list+="<li>"+names[i]+"</li>";
+				}
+				var ul = document.getElementById('nameList');
+				ul.innerHTML = list;
+			}		
+		}
 //Make a request to server and send the name
-var names = ['Mathew','Ann','John'];
-var list = '';
-for (var i=0; i<names.length; i++){
-	list+="<li>"+names[i]+"</li>";
-}
-var ul = document.getElementById('nameList');
-ul.innerHTML = list;
-//Render the list
+
+//Send request
+request.open('GET',"http://mathewthecoder.imad.hasura-app.io/search-name?name="+input, true);
+request.send(null);
 };

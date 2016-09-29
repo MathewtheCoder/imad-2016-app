@@ -46,7 +46,9 @@ submit.onclick = function() {
 		}
 //Make a request to server and send the name
 
+};
 //Send request
 request.open('GET',"http://mathewthecoder.imad.hasura-app.io/search-name?name="+input, true);
 request.send(null);
+
 };

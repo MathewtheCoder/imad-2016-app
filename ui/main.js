@@ -8,7 +8,7 @@ but.onclick = function() {
 	//Capture the response and store it in a variable
 	request.onreadystatechange = function() {
 		console.warn(request.readystate);
-		if(request.readystate === XMLHttpRequest.DONE){
+		if(request.readyState === XMLHttpRequest.DONE){
 			//Do something
 			console.warn(request.status);
 			if(request.status === 200){
@@ -20,6 +20,6 @@ but.onclick = function() {
 			}		
 		}	
 	};
-	request.open('GET',"http://mathewthecoder.imad.hasura-app.io//counter", true);
+	request.open('GET',"http://mathewthecoder.imad.hasura-app.io/counter", true);
 	request.send(null);
 };

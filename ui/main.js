@@ -22,3 +22,17 @@ but.onclick = function() {
 	request.open('GET',"http://mathewthecoder.imad.hasura-app.io/counter", true);
 	request.send(null);
 };
+var inputField = document.getElementById('txt_name');
+var input = inputField.value;
+var submit = document.getElementById('btn_submit');
+submit.onclick = function() {
+//Make a request to server and send the name
+var names = ['Mathew','Ann','John'];
+var list = '';
+for (var i=0; i<names.length; i++){
+	list+="<li>"+names[i]+"</li>";
+}
+var ul = document.getElementById('nameList');
+ul.innerHTML = list;
+//Render the list
+};

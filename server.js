@@ -63,6 +63,7 @@ var counter = 0;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+var names = [];
 app.get('/search-name', function(req, res){
 	var name = req.query.name;
 	names.push(name);
@@ -79,7 +80,7 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
-var names = [];
+
 /*
 app.get('/search-name/:name', function(req, res){
 	var name = req.params.name;

@@ -23,9 +23,10 @@ but.onclick = function() {
 	request.send(null);
 };
 var inputField = document.getElementById('txt_name');
-var input = inputField.value;
 var submit = document.getElementById('btn_submit');
 submit.onclick = function() {
+	//Extract text
+	var input = inputField.value;
 	//Make request object
 	var request = new XMLHttpRequest();
 	//Capture the response and store it in a variable

@@ -35,7 +35,8 @@ submit.onclick = function() {
 			//Do something
 			if(request.status === 200){
 				//console.info("Ready");
-				var names = ['Mathew','Ann','John'];
+				var names = request.responseText;
+				names = JSON.parse(names);
 				var list = '';
 				for (var i=0; i<names.length; i++){
 					list+="<li>"+names[i]+"</li>";

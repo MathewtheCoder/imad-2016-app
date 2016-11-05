@@ -139,6 +139,7 @@ article::before {
 .article .article-content > .container {
     padding: 3rem;
 }
+/*About Us*/
 #about{
   position:relative;
   top:8em;
@@ -160,10 +161,12 @@ hr.rounded {
     border-radius: 5px;
     display: block;
 }
+/*Portifolio*/
 #port{
   position:relative;
   top:8em;
 }
+/*Contact Us*/
 #contact{
   position:relative;
   top:8em;
@@ -172,6 +175,7 @@ hr.rounded {
 {
   font-size:8em;
 }
+/*Footer Section*/
 footer{
   background-color:white;
   position:relative;
@@ -185,4 +189,23 @@ footer p{
 footer h2{
    position:relative;
     top:-1em;
+}
+/*ScrollToTop*/
+.scrollToTop{
+    width:100px; 
+    height:130px;
+    padding:10px; 
+    text-align:center; 
+    background: whiteSmoke;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+    position:fixed;
+    top:75px;
+    right:40px;
+    display:none;
+    background: url('/ui/Arrow-Up.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+    text-decoration:none;
 }

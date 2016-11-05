@@ -1,28 +1,188 @@
-body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
-}
-.container {	
-	margin:0 auto;
-	padding-top:10px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
 
-.center {
+.navbar-default{
+  background-color:#77C5F7;
+  
+}
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 42px;
+    margin: 0 0 23px 0;
+    color:#354458 !important;
+    }
+li a{
+    color:#354458 !important;
+    position:relative;
+    top:.5em;
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin: 0 0 -10px  0;
+    }
+li a:hover {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin: 0 0 -10px  0;
+    color:#f0f0f0 !important;
+    
+    }
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 42px;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin: 0 0 23px 0;
+    }
+p {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+p.intro {
     text-align: center;
+    text-justify: inter-word;
+    font-family: 'Alegreya', serif;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 35px;
 }
-
-.text-big {
-    font-size: 300%;
+p.intro span {
+    font-size: 20px;
+    font-style: italic;
 }
-
-.bold {
+#about h1 strong {
     font-weight: bold;
+    color: #E26363;
+}
+.article{
+  background-image: url(https://www.tofugu.com/images/layout/placeholders/articles/japanese/header-2560x-b6dd1c83.jpg);
+  background-size:cover;
+}
+.article-header {
+    position: relative;
+    min-height: 30rem;
+    height: 85vh;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family:  Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    z-index: 0;
 }
 
-.img-medium {
-    height: 200px;
+.bg-angled.bg-angled-bottom {
+    bottom: -7rem;
 }
-
+.bg-angled {
+    background-color: #fff;
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 10rem;
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    z-index: 2;
+}
+article {
+    position: relative;
+    margin-top: -1rem;
+    background-color: #fff;
+    z-index: 3;
+}
+.article-content
+{  
+position: relative;
+margin-top: -6rem;
+background-color: #fff;
+z-index: 3;
+margin-bottom: 2rem;
+}
+article::before {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    top: 0;
+    left: 0;
+    box-shadow: 0 -2rem 2rem rgba(0,0,0,0.05);
+    content: '';
+    z-index: -1;
+}
+.article .article-content::before {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    top: 0;
+    left: 0;
+    box-shadow: 0 -2rem 2rem rgba(0,0,0,0.05);
+    content: '';
+    z-index: -1;
+}
+.article .article-content > .container {
+    padding: 3rem;
+}
+#about{
+  position:relative;
+  top:8em;
+}
+#about hr {
+    display: inline-block;
+    width: 60%;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+hr.rounded {
+    height: 10px;
+    border: 0;
+    background-color: #E26363;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+}
+#port{
+  position:relative;
+  top:8em;
+}
+#contact{
+  position:relative;
+  top:8em;
+}
+.contact-button
+{
+  font-size:8em;
+}
+footer{
+  background-color:white;
+  position:relative;
+  top:5em;
+}
+footer p{
+  position:relative;
+  top:.2em;
+  line-height:5px;
+}
+footer h2{
+   position:relative;
+    top:-1em;
+}

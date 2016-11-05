@@ -75,6 +75,9 @@ var counter = 0;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+app.get('/home', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'home.html'));
+});
 
 // create the pool somewhere globally so its lifetime
 // lasts for as long as your app is running

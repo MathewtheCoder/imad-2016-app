@@ -73,7 +73,7 @@ p.intro span {
     color: #E26363;
 }
 .article{
-  background-image: url(https://www.tofugu.com/images/layout/placeholders/articles/japanese/header-2560x-b6dd1c83.jpg);
+  background-image: url('/ui/header.jpg');
   background-size:cover;
 }
 .article-header {

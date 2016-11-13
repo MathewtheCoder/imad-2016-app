@@ -30,3 +30,9 @@ $(document).ready(function(){
     }
   });
 });
+
+
+//Function to revealEmail
+function revealEmail(){
+	alert("jmathew1201@live.com");
+}

@@ -73,10 +73,11 @@ return template;
 
 var counter = 0;
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-app.get('/home', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'home.html'));
+});
+
+app.get('/blog', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog.html'));
 });
 
 // create the pool somewhere globally so its lifetime

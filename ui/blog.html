@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="author" content="Mathew Joseph">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+	<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="stylesheet" type="text/css" href="/ui/style.css">
+</head>
+<body>
+	<div id="body_wrap">
+		<header class="page-header">
+	        <div class="page-header__title">
+	            <h1>The Myth of the Full-stack Developer</h1>
+	            <p>A well-balanced article/controversial rant about the term 'full-stack developer'. By <a href="#author">Mathew Joseph</a></p>
+	            <a href="/">← back to main page</a>
+	        </div>
+	        
+    	</header>    
+	</div>
+	<div class="page-article">
+		<section>
+            <h2>Full-stack used to mean less layers.</h2>
+
+            <p>Coding php or Python, jQuery, HTML, CSS then transferring a few files via FTP to your shared hosting account or dedicated server? You were full-stack. HTML was trivial, and even thinking of implementing any proper application code in JavaScript wasn't possible.</p>
+
+            <p>My beef is not with people who can do all of the above, it's with the label 'full-stack developer'. <strong>What does it mean in 2014?</strong></p>
+            <p>At the level of a senior full-stack engineer we're perhaps talking about architecting a modular Backbone/AngularJS front-end whilst optimising content delivery and tweaking hardware accelerated layers in CSS, followed by implementing an async non-blocking backend (which also pre-renders templates on the server), and pushing to an AWS cluster which has been built with security and scaleability in mind. Not to mention design. Designing UI responsively and mobile-first is essential, utilising a CSS pre-processor to save time. And remember to setup Nagios for monitoring. Oh, and ideally when the Continuous Integration server detects a bad build because your end-to-end tests have failed, get it to send you an SMS with the build error messages. Well, the last two are probably for bonus points.</p>
+
+        <p>Ask someone who labels themselves 'full-stack'. Do they believe they have familiarity with different layers, or true mastery?</p>
+        </section>
+	</div>
+</div>
+<!--Author Details-->
+<div id="author" class="author-wrap">
+	<section class="author">
+        <div class="author__pic"></div>
+        <div class="author__desc">
+            <p>Hi, I'm <strong>Andy Shora</strong>. I'm a <strong>Frontend Web Developer</strong> based in London and I currently work with some very talented people over at <a href="http://www.rga.com">R/GA</a>. On the side, I recently built <a href="http://www.stackey.com" target="_blank" title="Stackey.com, a place where you can stack things that go together">Stackey</a> and <a href="http://www.thecityawards.com" target="_blank" title="Vote for your favourite places">The City Awards</a>.</p>
+            <div class="author__links">
+                <a class="author__link" href="https://www.facebook.com/mathew.joseph.1806253"><i class="fa fa-facebook-official"></i> mathew</a>
+                <a class="author__link" href="http://www.facebook.com/andyshora"><i class="icon-facebook"></i> fb<span class="link__extra">.com/andyshora</span></a>
+                <a class="author__link" href="http://www.pinterest.com/andyshora"><i class="icon-pinterest"></i> pinterest<span class="link__extra">.com/andyshora</span></a>
+                <a class="author__link" href="http://www.github.com/andyshora"><i class="icon-github"></i> github<span class="link__extra">.com/andyshora</span></a>
+                <a class="author__link" onclick="revealEmail()"><i class="icon-envelope"></i> contact<span class="link__extra"> me</span></a>
+            </div>
+        </div>
+    </section>
+</div>
+<!--Scripts loaded last to reduce lag in web page rendering-->
+<script type="text/javascript" src="/ui/main.js"></script>
+</body>
+</html>

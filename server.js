@@ -10,9 +10,11 @@ var articles = {
 	heading: 'Article-1',
 	date: '10 Sep,2016',
 	content: `
+	<section>
 		<p>
 			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 		</p>
+	</section>
 	`
 	},
 	'article-two' : {
@@ -42,32 +44,60 @@ var config = {
 function createTemplate(data){
 var title = data.title;
 var heading = data.heading;
+var tagline = data.tagline;
 var date = data.date;
 var content = data.content;
-var template = `
+
+var blogTemplate = `
 <!DOCTYPE html>
 <html>
 <head>
 	<title>${title}</title>
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	<meta name="viewport" content="width=device-width, intial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="author" content="Mathew Joseph">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+	<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="stylesheet" type="text/css" href="/ui/style.css">
 </head>
 <body>
-<div class='container'>
-	<div>
-		<h2>${heading}</h2>
+	<div id="body_wrap">
+		<header class="page-header">
+	        <div class="page-header__title">
+	            <h1>${heading}</h1>
+	            <p>${tagline}. By <a href="#author">Mathew Joseph</a></p>
+	            <a href="/">← back to main page</a>
+	        </div>
+	        
+    	</header>    
 	</div>
-	<div>
-		${date.toDateString()}
-	</div>
-	<div>
+	<div class="page-article">
 		${content}
 	</div>
 </div>
+<!--Author Details-->
+<div id="author" class="author-wrap">
+	<section class="author">
+        <div class="author__pic"></div>
+        <div class="author__desc">
+            <p>Hi, I'm <strong>Mathew Joseph</strong>. I'm a <strong>Frontend Web Developer</strong> based in Kerala. </p>
+            <div class="author__links">
+                <a class="author__link" href="https://www.facebook.com/mathew.joseph.1806253"><i class="fa fa-facebook-official"></i> mathew</a>
+                <a class="author__link" href="http://www.facebook.com/andyshora"><i class="icon-facebook"></i> fb<span class="link__extra">.com/andyshora</span></a>
+                <a class="author__link" href="http://www.pinterest.com/andyshora"><i class="icon-pinterest"></i> pinterest<span class="link__extra">.com/andyshora</span></a>
+                <a class="author__link" href="http://www.github.com/andyshora"><i class="icon-github"></i> github<span class="link__extra">.com/andyshora</span></a>
+                <a class="author__link" onclick="revealEmail()"><i class="icon-envelope"></i> contact<span class="link__extra"> me</span></a>
+            </div>
+        </div>
+    </section>
+</div>
+<!--Scripts loaded last to reduce lag in web page rendering-->
+<script type="text/javascript" src="/ui/main.js"></script>
 </body>
 </html>
 `;
-return template;
+return blogTemplate;
 }
 
 
@@ -110,8 +140,9 @@ app.get('/counter', function (req, res){
 	res.send(counter.toString());
 });
 app.get('/articles/:articleName', function (req, res) {
-  //articleName = article-one;
   var articleName = req.params.articleName;
+  
+  //Query
   pool.query("SELECT * FROM art WHERE title='"+articleName+"'", function(err, result){
   	if(err){
   		res.status(500).send(err.toString());
@@ -126,6 +157,7 @@ app.get('/articles/:articleName', function (req, res) {
   		}
   	}
   });
+  
   
 });
 

@@ -165,7 +165,7 @@ return blogTemplate;
 
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'home.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 // create the pool somewhere globally so its lifetime

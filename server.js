@@ -239,12 +239,29 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 app.get('/ui/header.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'header.jpg'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'header.jpg'));
 });
 app.get('/ui/mathewport.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'mathewport.jpg'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'mathewport.jpg'));
 });
-
+app.get('/ui/wiki.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','images' ,'wiki.png'));
+});
+app.get('/ui/mandela.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','images' ,'mandela.png'));
+});
+app.get('/ui/pomo.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','images' ,'pomo.png'));
+});
+app.get('/ui/calc.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','images' ,'calc.png'));
+});
+app.get('/ui/simon.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','images' ,'simon.png'));
+});
+app.get('/ui/tic.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','images' ,'tic.png'));
+});
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);

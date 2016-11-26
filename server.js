@@ -245,22 +245,22 @@ app.get('/ui/mathewport.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui','images' ,'mathewport.jpg'));
 });
 app.get('/ui/wiki.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui','images' ,'wiki.png'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'wiki.PNG'));
 });
 app.get('/ui/mandela.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui','images' ,'mandela.png'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'mandela.PNG'));
 });
 app.get('/ui/pomo.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui','images' ,'pomo.png'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'pomo.PNG'));
 });
 app.get('/ui/calc.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui','images' ,'calc.png'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'calc.PNG'));
 });
 app.get('/ui/simon.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui','images' ,'simon.png'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'simon.PNG'));
 });
 app.get('/ui/tic.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui','images' ,'tic.png'));
+  res.sendFile(path.join(__dirname, 'ui','images' ,'tic.PNG'));
 });
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {

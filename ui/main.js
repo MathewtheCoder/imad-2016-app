@@ -1,6 +1,26 @@
 $(document).ready(function(){
-	
-	
+	//'use strict';
+	//Navbar
+	$('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+	});
+	$('.btn-default').click(function(){
+    	$(".navbar-collapse").collapse('hide');
+	});
+	//Dialog
+	var dialogButton = document.querySelector('.dialog-button');
+    var dialog = document.querySelector('#dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    dialogButton.addEventListener('click', function() {
+       dialog.showModal();
+    });
+    dialog.querySelector('button:not([disabled])')
+    .addEventListener('click', function() {
+      dialog.close();
+    });
+
 	//Check to see if the window is top if not then display button
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
@@ -36,3 +56,7 @@ $(document).ready(function(){
 function revealEmail(){
 	alert("jmathew1201@live.com");
 }
+
+
+
+

@@ -77,15 +77,18 @@ p.intro span {
     font-weight: bold;
     color: #E26363;
 }
+
 .article{
-  background-image: url('/ui/header.jpg');
+  background-image: url('/ui/header.jpg') !important;
   background-size:cover;
 }
+
 .article-header {
     position: relative;
     min-height: 30rem;
     height: 85vh;
     background-position: 50% 0%;
+    background-image: url('/ui/header.jpg') !important;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -296,7 +299,7 @@ section {
     height: 150px;
     float: left;
     border-radius: 75px 75px 0;
-    background: url(http://andyshora.com/img/avatar-512.png) center center/160px no-repeat #fff;
+    background: url("/ui/mathewport.jpg") center center/160px no-repeat #fff;
     -webkit-background-size: 160px;
     margin: -30px 0 0 20px;
     border: 1px solid #c4c4c4;
@@ -325,4 +328,99 @@ section {
 }
 .author__links .author__link i {
     margin: 0 5px 0 3px;
+}
+/*Article List*/
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url(https://getmdl.io/assets/demos/welcome_card.jpg) center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+/*Dialog Box*/
+.mdl-dialog {
+  border: none;
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+  width: 280px; }
+  .mdl-dialog__title {
+    padding: 24px 24px 0;
+    margin: 0;
+    font-size: 2.5rem; }
+  .mdl-dialog__actions {
+    padding: 8px 8px 8px 24px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .mdl-dialog__actions > * {
+      margin-right: 8px;
+      height: 36px; }
+      .mdl-dialog__actions > *:first-child {
+        margin-right: 0; }
+    .mdl-dialog__actions--full-width {
+      padding: 0 0 8px 0; }
+      .mdl-dialog__actions--full-width > * {
+        height: 48px;
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        padding-right: 16px;
+        margin-right: 0;
+        text-align: right; }
+  .mdl-dialog__content {
+    padding: 20px 24px 24px 24px;
+    color: rgba(0,0,0, 0.54); }
+/*Media Queries*/
+@media only screen and (max-width: 500px) {
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    line-height: 27px;
+    font-size: 23px;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 2px;
+    margin: 0 0 23px 0;
+    }
+p {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0 0 23px 0;
+    }
+p.intro {
+    text-align: center;
+    text-justify: inter-word;
+    font-family: 'Alegreya', serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 25px;
+}
+p.intro span {
+    font-size: 13px;
+    font-style: italic;
+}
+#about h1 strong {
+    font-weight: bold;
+    color: #E26363;
+}
+.contact-button
+{
+  font-size:3em;
+}
 }
